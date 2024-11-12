@@ -320,7 +320,7 @@ const getPropertiesXml = (packageName) => {
 
 const collectImageReferences = (doc) => {
    // get all images with a fileReference attribute
-   const images = [...doc.querySelectorAll('[fileReference]')].map((image) => { return { image, attribute: 'fileReference' }});
+   const images = [...doc.querySelectorAll('[image]')].map((image) => { return { image, attribute: 'image' }});
   
    // get all other images inside blocks
    const blocks = [...doc.querySelectorAll('*')].filter((el) => el.getAttribute('sling:resourceType') === 'core/franklin/components/block/v1/block');
